@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:uts/bottom_bar.dart';
 import 'package:uts/planetpage.dart';
@@ -53,10 +54,10 @@ class _MyHomePageState extends State<MyHomePage>
         padding: EdgeInsets.only(left: 20.0),
         children: <Widget>[
           SizedBox(height: 15.0),
-          Text('PENGENALAN PLANET BUAT ANAK PAUD',
+          Text('PENGENALAN PLANET UNTUK PAUD',
               style: TextStyle(
                   fontFamily: 'Varela',
-                  fontSize: 20.0,
+                  fontSize: 18.0,
                   fontWeight: FontWeight.bold)),
           SizedBox(height: 10.0),
           TabBar(
@@ -68,26 +69,19 @@ class _MyHomePageState extends State<MyHomePage>
               unselectedLabelColor: Colors.black26,
               tabs: [
                 Tab(
-                  child: Text('Planet 1',
+                  child: Text('Planet Dalam',
                       style: TextStyle(
                         fontFamily: 'Varela',
                         fontSize: 21.0,
                       )),
                 ),
                 Tab(
-                  child: Text('Planet 2',
+                  child: Text('Planet Luar',
                       style: TextStyle(
                         fontFamily: 'Varela',
                         fontSize: 21.0,
                       )),
                 ),
-//                Tab(
-//                  child: Text('Planet 3',
-//                      style: TextStyle(
-//                        fontFamily: 'Varela',
-//                        fontSize: 21.0,
-//                      )),
-//                )
               ]),
           Container(
               height: MediaQuery.of(context).size.height - 30.0,

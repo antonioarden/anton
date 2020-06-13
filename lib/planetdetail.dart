@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:uts/bottom_bar.dart';
+import 'package:audioplayers/audioplayers.dart';
+//import 'package:audioplayers/audio_cache.dart';
 
 class PlanetDetail1 extends StatelessWidget {
   final assetPath, planetname;
+  AudioPlayer audioPlayer = AudioPlayer();
+//  AudioCache audioCache = AudioCache();
 
   PlanetDetail1({this.assetPath,this.planetname});
   @override
@@ -58,7 +62,7 @@ class PlanetDetail1 extends StatelessWidget {
             Center(
               child: Container(
                 width: MediaQuery.of(context).size.width - 50.0,
-                child: Text('ini adalah planet merkurius',
+                child: Text('ini adalah planet ke-1',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontFamily: 'Varela',
@@ -71,9 +75,12 @@ class PlanetDetail1 extends StatelessWidget {
           ]
       ),
 
-      floatingActionButton: FloatingActionButton(onPressed: () {},
+      floatingActionButton: FloatingActionButton(onPressed: () async {
+          await audioPlayer.play('sound/merkurius.mp3', isLocal: true);
+//      print('test');
+      },
         backgroundColor: Colors.cyanAccent,
-        child: Icon(Icons.pets),
+        child: Icon(Icons.audiotrack),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomBar(),
@@ -138,7 +145,7 @@ class PlanetDetail2 extends StatelessWidget {
             Center(
               child: Container(
                 width: MediaQuery.of(context).size.width - 50.0,
-                child: Text('ini adalah planet venus',
+                child: Text('ini adalah planet ke-2',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontFamily: 'Varela',
@@ -153,7 +160,7 @@ class PlanetDetail2 extends StatelessWidget {
 
       floatingActionButton: FloatingActionButton(onPressed: () {},
         backgroundColor: Colors.cyanAccent,
-        child: Icon(Icons.pets),
+        child: Icon(Icons.audiotrack),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomBar(),
@@ -218,7 +225,7 @@ class PlanetDetail3 extends StatelessWidget {
             Center(
               child: Container(
                 width: MediaQuery.of(context).size.width - 50.0,
-                child: Text('ini adalah planet bumi',
+                child: Text('ini adalah planet ke-3',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontFamily: 'Varela',
@@ -233,7 +240,7 @@ class PlanetDetail3 extends StatelessWidget {
 
       floatingActionButton: FloatingActionButton(onPressed: () {},
         backgroundColor: Colors.cyanAccent,
-        child: Icon(Icons.pets),
+        child: Icon(Icons.audiotrack),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomBar(),
@@ -298,7 +305,7 @@ class PlanetDetail4 extends StatelessWidget {
             Center(
               child: Container(
                 width: MediaQuery.of(context).size.width - 50.0,
-                child: Text('ini adalah planet mars',
+                child: Text('ini adalah planet ke-4',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontFamily: 'Varela',
@@ -313,7 +320,7 @@ class PlanetDetail4 extends StatelessWidget {
 
       floatingActionButton: FloatingActionButton(onPressed: () {},
         backgroundColor: Colors.cyanAccent,
-        child: Icon(Icons.pets),
+        child: Icon(Icons.audiotrack),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomBar(),
@@ -378,7 +385,7 @@ class PlanetDetail5 extends StatelessWidget {
             Center(
               child: Container(
                 width: MediaQuery.of(context).size.width - 50.0,
-                child: Text('ini adalah planet jupiter',
+                child: Text('ini adalah planet ke-5',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontFamily: 'Varela',
@@ -393,7 +400,7 @@ class PlanetDetail5 extends StatelessWidget {
 
       floatingActionButton: FloatingActionButton(onPressed: () {},
         backgroundColor: Colors.cyanAccent,
-        child: Icon(Icons.pets),
+        child: Icon(Icons.audiotrack),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomBar(),
@@ -458,7 +465,7 @@ class PlanetDetail6 extends StatelessWidget {
             Center(
               child: Container(
                 width: MediaQuery.of(context).size.width - 50.0,
-                child: Text('ini adalah planet saturnus',
+                child: Text('ini adalah planet ke-6',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontFamily: 'Varela',
@@ -473,7 +480,7 @@ class PlanetDetail6 extends StatelessWidget {
 
       floatingActionButton: FloatingActionButton(onPressed: () {},
         backgroundColor: Colors.cyanAccent,
-        child: Icon(Icons.pets),
+        child: Icon(Icons.audiotrack),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomBar(),
@@ -538,7 +545,7 @@ class PlanetDetail7 extends StatelessWidget {
             Center(
               child: Container(
                 width: MediaQuery.of(context).size.width - 50.0,
-                child: Text('ini adalah planet uranus',
+                child: Text('ini adalah planet ke-7',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontFamily: 'Varela',
@@ -553,7 +560,7 @@ class PlanetDetail7 extends StatelessWidget {
 
       floatingActionButton: FloatingActionButton(onPressed: () {},
         backgroundColor: Colors.cyanAccent,
-        child: Icon(Icons.pets),
+        child: Icon(Icons.audiotrack),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomBar(),
@@ -618,7 +625,7 @@ class PlanetDetail8 extends StatelessWidget {
             Center(
               child: Container(
                 width: MediaQuery.of(context).size.width - 50.0,
-                child: Text('ini adalah planet neptunus',
+                child: Text('ini adalah planet ke-8',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontFamily: 'Varela',
@@ -633,7 +640,7 @@ class PlanetDetail8 extends StatelessWidget {
 
       floatingActionButton: FloatingActionButton(onPressed: () {},
         backgroundColor: Colors.cyanAccent,
-        child: Icon(Icons.pets),
+        child: Icon(Icons.audiotrack),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomBar(),
@@ -691,7 +698,7 @@ class Matahari extends StatelessWidget{
             Center(
               child: Container(
                 width: MediaQuery.of(context).size.width - 50.0,
-                child: Text('MATAHARI ',
+                child: Text('ini adalah MATAHARI ',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontFamily: 'Varela',
@@ -706,7 +713,7 @@ class Matahari extends StatelessWidget{
 
       floatingActionButton: FloatingActionButton(onPressed: () {},
         backgroundColor: Colors.cyanAccent,
-        child: Icon(Icons.pets),
+        child: Icon(Icons.audiotrack),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomBar(),
