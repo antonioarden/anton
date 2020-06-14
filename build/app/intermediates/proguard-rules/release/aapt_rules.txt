@@ -1,0 +1,6 @@
+# Referenced at D:\Kuliah\Semester 6\Pemrograman Mobile\UAS\anton\build\app\intermediates\merged_manifests\release\AndroidManifest.xml:17
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+# Referenced at D:\Kuliah\Semester 6\Pemrograman Mobile\UAS\anton\build\app\intermediates\merged_manifests\release\AndroidManifest.xml:22
+-keep class com.example.uts.MainActivity { <init>(); }
+# Referenced at D:\Kuliah\Semester 6\Pemrograman Mobile\UAS\anton\build\app\intermediates\merged_manifests\release\AndroidManifest.xml:17
+-keep class io.flutter.app.FlutterApplication { <init>(); }

@@ -1,12 +1,51 @@
 import 'package:flutter/material.dart';
 import 'package:uts/bottom_bar.dart';
 import 'package:audioplayers/audioplayers.dart';
-//import 'package:audioplayers/audio_cache.dart';
+import 'package:audioplayers/audio_cache.dart';
 
 class PlanetDetail1 extends StatelessWidget {
   final assetPath, planetname;
   AudioPlayer audioPlayer = AudioPlayer();
-//  AudioCache audioCache = AudioCache();
+  AudioCache audioCache = AudioCache();
+
+  Widget _tab(List<Widget> children) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Container(
+          padding: EdgeInsets.all(16.0),
+          child: Column(
+            children: children
+                .map((w) => Container(child: w, padding: EdgeInsets.all(6.0)))
+                .toList(),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _btn(String txt, VoidCallback onPressed) {
+    return ButtonTheme(
+      minWidth: 48.0,
+      child: Container(
+        width: 150,
+        height: 45,
+        child: RaisedButton(
+            shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+            child: Text(txt),
+            color: Colors.blueAccent[900],
+            textColor: Colors.white,
+            onPressed: onPressed),
+      ),
+    );
+  }
+
+  Widget LocalAudio() {
+    return _tab([
+      _btn('Play', () => audioCache.play('sound/merkurius.mp3')),
+    ]);
+  }
 
   PlanetDetail1({this.assetPath,this.planetname});
   @override
@@ -72,15 +111,16 @@ class PlanetDetail1 extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20.0),
+          LocalAudio()
           ]
       ),
 
-      floatingActionButton: FloatingActionButton(onPressed: () async {
-          await audioPlayer.play('sound/merkurius.mp3', isLocal: true);
-//      print('test');
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        audioCache.play('sound/merkurius.mp3');
+        print('test');
       },
         backgroundColor: Colors.cyanAccent,
-        child: Icon(Icons.audiotrack),
+        child: Icon(Icons.audiotrack)
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomBar(),
